@@ -81,7 +81,7 @@
           </div>
           <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
           <div class="text-center">
-            <span class="btn btn-default btn-file"><span class="fileinput-new">Choose Photo</span><span class="fileinput-exists">Change</span><input name="..." type="file"></span>
+            <span class="btn btn-default btn-file"><span class="fileinput-new">Choose Photo</span><span class="fileinput-exists">Change</span>{!! Form::file('photo') !!}</span>
             <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
           </div>
         </div>

@@ -31,12 +31,26 @@
         </div>
         <!-- /.navbar-header -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
+         
           <div class="nav navbar-right navbar-btn">
             <a href="{{ route('contacts.create') }}" class="btn btn-default">
               <i class="glyphicon glyphicon-plus"></i> 
               Add Contact
             </a>
           </div>
+          {!! Form::open(['route'=>'contacts.index','method'=>'GET','class'=>'navbar-form navbar-right','role'=>'search']) !!}
+           {{-- <form action="" class="navbar-form navbar-right" role="search"> --}}
+            <div class="input-group">
+              {!! Form::text('term',Request::get('term'),['class'=>'form-control','placeholder'=>'Search...']) !!}
+              {{-- <input type="text" name="term" id="term" class="form-control" placeholder="Search..."> --}}
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </span>
+            </div>
+          {{-- </form> --}}
+          {!! Form::close() !!}
         </div>
       </div>
     </nav>

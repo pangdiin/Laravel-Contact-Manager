@@ -11,7 +11,9 @@
 	      <div class="media">
 	        <div class="media-left">
 	          <a href="#">
-	            <img class="media-object" src="http://placehold.it/100x100" alt="...">
+	            {{-- <img class="media-object" src="http://placehold.it/100x100" alt="..."> --}}
+	            <?php $photo = !is_null($contact->photo) ? $contact->photo : 'default.jpg' ?>
+	            {!! Html::image('uploads/' . $photo, $contact->name, ['class'=>'media-object','height'=>100,'width'=>100]) !!}
 	          </a>
 	        </div>
 	        <div class="media-body">
